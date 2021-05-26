@@ -1,0 +1,487 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+h1{
+    text-align: center;
+    font-size: 2.5rem;
+}
+p{
+    font-size: 1.2rem;
+    text-align: justify;
+}
+.navbar{
+    background-color: #FF3CAC;
+    background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+    
+    padding: 1% 7%;
+    text-align: center
+    
+}
+[class*="col-"]{
+    float: left;
+    padding: 10px;
+}
+/*for mobile*/
+[class*="col-"]
+{
+ width: 100%;
+}
+
+.navbar a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: black;
+    margin: 7px 0px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.navbar a:hover{
+    background-color: blue;
+}
+.hd h1{
+    color: white;
+    margin: 0;
+    padding-top: 10px;
+}
+.logo img{
+    height: 8rem;
+    width: 8rem;
+    border-radius: 10%;
+}
+.menu{
+    display: flex;
+    text-transform: uppercase;
+    flex-direction: column;
+}
+.navbar:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+ /* profile er kaaj */
+.profile{
+ padding: 100px 10px;
+ position: relative;
+ text-align: center;
+}
+.first{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    transition: transform 2s;
+    border-radius: 10px;
+    width: 8rem;
+    height: 6rem;
+}
+.first:hover{
+    transform:rotate(360deg);
+}
+.profile-des p{
+    color: black;
+    font-family: 'Odibee Sans', cursive;
+    width:90%;
+    text-align: center;
+    margin:  0 auto 20px auto;
+    padding-bottom: 10px;
+}
+.profile-des h3{ 
+    font-family: 'Pattaya', sans-serif;
+    font-size: 3rem;
+}
+.second{
+    position: absolute;
+    left: 30px;
+    bottom: 10px;
+    transition: transform 2s;
+    border-radius: 10px;
+    width: 8rem;
+    height: 6rem;
+}
+.second:hover{
+    transform:rotate(360deg);
+}
+
+/* about me section */
+.about-me h2{
+    font-size: 2rem;
+    text-align: center;
+}
+.about-me{
+    background-color: #4158D0;
+background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
+    color: white;
+    text-align: center;
+    padding: 1% 7%;
+    font-family: 'Stint Ultra Condensed', cursive;
+}
+.aa{
+    color: black;
+    text-decoration: none;
+}.about-me p{
+    color: black;
+}
+.aa:hover{
+    background-color: aquamarine;
+}
+.about-me:after
+{
+    content:"";
+    display: table;
+    clear: both;
+}
+.dotted-hr{
+    border-bottom: none;
+    border: dotted 3px wheat;
+   margin: 20px auto;
+   width: 150px;    
+}
+.about-me-chobi img{
+    border-radius: 10%;
+    border: 2px solid wheat;
+    height: 220px;
+    width: 200px;
+}
+.cv-button{
+    background-color: aliceblue;
+    color: black;
+    border-radius: 10%;
+    padding: 10px;
+    font-size: 1rem;
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+}
+.cv-button:hover{
+    background-color: #2B86C5;
+}
+.porashuna{
+    padding: 1% 3%;
+}
+.edu-des p{
+    margin: 0px;
+    
+}
+.edu-icon img{
+    height: 90px;
+    width: 80px;
+    border-radius: 40%;
+    border: 5px solid black;
+}
+.edu-icon{
+    text-align: center;
+    padding-top: 15px;
+}
+.card{
+    background-color: gray;
+    border-radius: 5px;
+    padding: 10px;
+    transition: 0.3s;
+    height: 830px;
+}
+.card:hover{
+    box-shadow: 2px 4px 7px 5px black;
+}
+.edu:after{
+    clear: both;
+    content: "";
+    display: table;
+}
+.skill:after{
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.porashuna:after{
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.title h2{
+    text-align: center;
+    background-color:black;
+    color: white;
+    padding: 10px 10px;
+    margin: 10px;
+   
+}
+.skill-container{
+    padding-right: 45px;
+}
+.skill-container li{
+    list-style: none;
+    font-weight: bolder;
+    margin: 20px 10px;
+    position: relative;
+}
+.skill-container li:before{
+   height: 10px;
+   width: 100%;
+   background-color: aqua;
+   content: "";
+   position: absolute;
+   top: calc( 100% + 5px);
+   border-radius: 1000px;
+}
+.skill-container li:after{
+    height: 10px;
+    width: 0;
+    left: 0;
+    background-color:green;
+    content: "";
+    position: absolute;
+    top: calc( 100% + 5px);
+    border-radius: 1000px;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+ }
+ .skill-container li.HTML::after{
+     animation-name: html;
+ }
+ @keyframes html{
+     to{
+         width: 80%;
+     }
+ }
+ .skill-container li.CSS::after{
+    animation-name: CSS;
+}
+@keyframes CSS{
+    to{
+        width: 60%;
+    }
+}
+.skill-container li.BOOTSTRAP::after{
+    animation-name: BOOTSTRAP;
+}
+@keyframes BOOTSTRAP{
+    to{
+        width: 70%;
+    }
+}
+.skill-container li.C::after{
+    animation-name: C;
+}
+@keyframes C{
+    to{
+        width: 80%;
+    }
+}
+.skill-container li.CPP::after{
+    animation-name: CPP;
+}
+@keyframes CPP{
+    to{
+        width: 85%;
+    }
+}
+.skill-container li.Python::after{
+    animation-name: Python;
+}
+@keyframes Python{
+    to{
+        width: 50%;
+    }
+}
+.skill-container li.JavaScript::after{
+    animation-name: JavaScript;
+}
+@keyframes JavaScript{
+    to{
+        width: 60%;
+    }
+}
+.skill-container li.Algorithm::after{
+    animation-name: Algorithm;
+}
+@keyframes Algorithm{
+    to{
+        width: 55%;
+    }
+}
+.skill-container li.Data-Structure::after{
+    animation-name: Data-Structure;
+}
+@keyframes Data-Structure{
+    to{
+        width: 50%;
+    }
+}
+.skill-container li.OOP::after{
+    animation-name: OOP;
+}
+@keyframes OOP{
+    to{
+        width: 70%;
+    }
+}
+.skill-container li.Machine-Learning::after{
+    animation-name: Machine-Learning;
+}
+@keyframes Machine-Learning{
+    to{
+        width: 30%;
+    }
+}
+.skill-container li.Computer-Security::after{
+    animation-name: Computer-Security;
+}
+@keyframes Computer-Security{
+    to{
+        width: 35%;
+    }
+}
+.skill-container li.Database-Administration::after{
+    animation-name: Database-Administration;
+}
+@keyframes Database-Administration{
+    to{
+        width: 57%;
+    }
+}
+.skill-container li.Git::after{
+    animation-name: Git;
+}
+@keyframes Git{
+    to{
+        width: 50%;
+    }
+}
+.skill-container li.React::after{
+    animation-name: React;
+}
+@keyframes React{
+    to{
+        width: 10%;
+    }
+}
+.skill-container li.Node-JS::after{
+    animation-name: Node-JS;
+}
+@keyframes Node-JS{
+    to{
+        width: 10%;
+    }
+}
+.experience-container li{
+    list-style:circle;
+    font-size: 20px;
+    font-family: 'Source Code Pro', monospace;
+    margin: 10px 5px;
+}
+.achievement{
+    padding: 1% 7%;
+    background-color: #4158D0;
+background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
+    color: black;
+}
+.achievement h2{
+    text-align: center;
+}
+.achievement:after{
+    display: table;
+    content: "";
+    clear: both;
+}
+.cnme h2{
+    text-align: center;
+}
+.cnme{
+    padding: 1% 5%;
+}
+.cnme input,textarea{
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 5px;
+    resize: none;
+}
+.cnme button{
+    background-color: black;
+    color: wheat;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+}
+.cnme button:hover{
+    background-color: #2B86C5;
+}
+.ac p{
+    color: aliceblue;
+    font-weight: bold;
+}
+.ac a{
+    color: black;
+}
+.ac a:hover{
+    background-color: aquamarine;
+}
+.cnme::after{
+    display: table;
+    content: "";
+    clear: both;
+}
+.ac-links h2{
+    text-align: center;
+}
+.ac-links{
+    text-align: center;
+}
+.media-icons .btn{
+border: none;
+font-size: 32px;
+border-radius: 10px;
+cursor: pointer;
+padding: 5px;
+margin: 10px;
+width: 50px;
+background-color: white;
+}
+.media-icons .btn:hover{
+    background-color: #4158D0;
+}
+.ac-links::after{
+    display: table;
+    content: "";
+    clear: both;
+}
+.ft{
+    background-color: #784BA0;
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+.ft a{
+    color: black;
+    text-decoration: none;
+    font-size:x-large;
+    font-weight: 900;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    font-family: 'Source Code Pro', monospace;
+}
+.ft a:hover{
+    background-color: #F4D03F;
+    background-image: linear-gradient(132deg, #F4D03F 0%, #16A085 100%);
+    
+}
+.ft p{
+    text-align: center;
+    bottom: 10px;
+}
